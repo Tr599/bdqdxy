@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No.2 - 初步接触 CSS 2D 变形</title>
+    <style>
+        .box0,.box1,.box2,.box3,.box4,.box5{
+            border: solid 2px #ebebeb;
+            background-color: #f7f6f6;
+            width: 60px;
+            height: 68px;
+            line-height: 68px;
+            text-align: center;
+            margin: 40px;
+            float: left;
+        }
+        .box1{
+            transform: skew(30deg,0deg); /*x轴倾斜30°*/
+        }
+        .box2{
+            transform: scale(0.5,1); /*x 压缩两倍*/
+        }
+        .box3{
+            transform: rotate(45deg); /*旋转45°*/
+        }
+        .box4{
+            transform: translate(10px,20px); /*x偏移10px，y偏移20px*/
+        }
+        .box5{
+            transform: matrix(1,1,-0.1,1,10,20);/*上述全部*/
+        }
+    </style>
+</head>
+<body>
+<div class="box0">box0</div>
+<div class="box1">box1</div>
+<div class="box2">box2</div>
+<div class="box3">box3</div>
+<div class="box4">box4</div>
+<div class="box5">box5</div>
+</body>
+</body>
+</html>
