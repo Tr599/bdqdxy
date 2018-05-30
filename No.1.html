@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <style>
+        #wrap{
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            width: 500px;
+            height: 200px;
+        }
+        p.txt{
+            font-size: 36px;
+        }
+        #line{
+            width: 0;
+            height: 5px;
+            border-radius: 5px;
+            background-color: blue;
+            margin: 0 auto;
+            position: absolute;
+            top: 50px;
+            left: 0px;
+            right: 0px;
+            transition: width 0.5s linear ;
+        }
+        #wrap.active #line{
+            width:200px;
+        }
+        .qiehuan{
+            margin: 0 auto;
+            text-align: center;
+            border: solid 1px #999999;
+            width: 200px;
+            border-radius: 5px;
+            font-size: 36px;
+            padding: 10px;
+            cursor: pointer;
+            color: #999999;
+        }
+    </style>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>No.1 - 制作一个简单的菜单动画效果</title>
+</head>
+<body>
+<div>
+    <div id="wrap">
+        <p class="txt">前 端 开 发</p>
+        <div id="line"></div>
+    </div>
+    <div class="qiehuan">切换样式</div>
+</div>
+</body>
+<script>
+    window.onload=function(){
+        document.getElementsByClassName('qiehuan')[0].onclick=function () {
+            var color=document.getElementsByClassName('txt')[0].style.color
+            if(color=='blue'){
+                document.getElementsByClassName('txt')[0].style.color='black';
+                document.getElementById('wrap').classList.remove('active');
+            }else{
+                document.getElementsByClassName('txt')[0].style.color='blue';
+                document.getElementById('wrap').classList.add('active');
+            }
+        };
+    };
+
+</script>
+</html>
